@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Messager</title>
+
+</head>
+
+<body>
+
+    <div class="two-boxes">
+
+
+        <div class="input-box">
+
+            <form id='form' class='form'>
+                <div>
+                    <input class="input-title" id='input-title' type="text" name="input-title" placeholder="Title">
+                </div>
+                <div>
+                    <input class="title-color" id='title-color' type="color">
+                </div>
+                <br>
+
+                <div>
+                    <input class="input-message" id='input-message' type="text" name="input-message" placeholder="Message">
+                </div>
+                <div>
+                    <input class="message-color" id='message-color' type="color">
+                </div>
+                <br>
+
+                <div>
+                    <input id='submit' type="submit" value="submit">
+                </div>
+            </form>
+
+
+        </div>
+
+
+        <div class="display-box">
+
+            <h1 id="display-title" class="display-title"></h1>
+            
+
+            <p id="display-message" class="display-message"></p>
+
+        </div>
+
+
+    </div>
+
+    <script>
+        const inputTitle = document.getElementById('input-title')
+        const titleColor = document.getElementById('title-color')
+
+        const inputMessage = document.getElementById('input-message')
+        const messageColor = document.getElementById('message-color')
+
+        const displayTitle = document.getElementById('display-title')
+        const displayMessage = document.getElementById('display-message')
+
+
+        function displayText() {
+
+            const title = inputTitle
+            const message = inputMessage
+
+            document.getElementById("display-title").style.color = titleColor.value;
+            document.getElementById("display-message").style.color = messageColor.value;
+
+            displayTitle.innerHTML = `Title: ${title.value}`
+            displayMessage.innerHTML = `Message: ${message.value}`
+        }
+
+        form.addEventListener('input', updateTitle)
+
+        function updateTitle(e) {
+            const newTitle = (e.target.value)
+            title = newTitle
+            displayText()
+        }
+
+        form.addEventListener('input', updateMessage)
+
+        function updateMessage(e) {
+            const newMessage = (e.target.value)
+            message = newMessage
+            displayText()
+        }
+
+
+        colorPicker.addEventListener("input", updateFirst, false);
+        colorPicker.addEventListener("change", watchColorPicker, false);
+
+        function watchColorPicker(event) {
+            document.querySelectorAll("p").forEach(function(p) {
+            p.style.color = event.target.value;
+            });
+        }   
+
+
+
+
+    </script>
+
+</body>
+
+</html>

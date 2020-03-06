@@ -1,0 +1,70 @@
+
+body {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 60px;
+
+}
+
+.two-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 700px;
+}
+
+.input-box {
+    border: 3px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 700px;
+    margin: 5px;
+    padding: 20px;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-title {
+    font-size: 30px;
+    width: 300px;
+}
+
+.input-message {
+    font-size: 1em;
+    height: 200px;
+    width: 300px;
+}
+
+
+.display-box {
+    border: 3px solid;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 700px;
+    margin: 5px;
+    padding: 20px;
+
+}
+
+.display-title {
+    font-size: 36px;
+}
+
+.display-message {
+    font-size: 28px;
+}
